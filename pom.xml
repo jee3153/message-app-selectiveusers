@@ -33,6 +33,18 @@
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectodd.sockjs</groupId>
+			<artifactId>sockjs-servlet</artifactId>
+			<version>[0.1.0,)</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-stomp</artifactId>
+			<version>5.5.4</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
