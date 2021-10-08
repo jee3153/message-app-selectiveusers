@@ -1,6 +1,6 @@
 package com.example.message.configuration;
 
-import com.example.message.handler.ChatWebSocketHandler;
+//import com.example.message.handler.ChatWebSocketHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
@@ -28,7 +28,10 @@ public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer 
     * */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
+//        registry.enableSimpleBroker("/user");
         registry.setApplicationDestinationPrefixes("/app");
+//        registry.enableSimpleBroker("/topic");
         registry.enableSimpleBroker("/topic");
+        registry.setUserDestinationPrefix("/topic");
     }
 }
